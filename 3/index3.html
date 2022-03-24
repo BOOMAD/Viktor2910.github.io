@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+
+
+
+<html lang="ru">
+
+
+<head>
+    <meta charset="utf-8" />
+    <title>Home Work</title>
+    <link rel="shortcut icon" href="server.jpg" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+    <body>
+        <div class="form">
+            <div class="header-form">
+                <span>Форма</span>
+            </div>
+            <!-- <h1 style="position: relative; text-align: center;">Форма</h1> -->
+
+            <form action="/"
+                  method="POST">
+                <div class="input-group">
+                    <label>
+                        Имя:<br />
+
+                        <input type="text" name="field-name"
+                               placeholder="Николай" required />
+                    </label><br />
+
+                    <label>
+                        Почта:
+                        <input type="email" name="field-email"
+                               placeholder="boom4d@yandex.ru"
+                               required />
+                    </label><br />
+
+                    <label>
+                        Дата рождения:<br />
+                        <input name="field-DoB"
+                               value="1990-01-01"
+                               type="date" />
+                    </label><br />
+
+                    Пол:<br />
+                    <label>
+                        <input type="radio" checked="checked"
+                               name="radio-group-1" value="Мужской" />
+                        Мужской
+                    </label>
+                    <label>
+                        <input type="radio"
+                               name="radio-group-1" value="Женский" />
+                        Женский
+                    </label>
+                    <label>
+                        <input type="radio"
+                               name="radio-group-1" value="Отсутствует" />
+                        Отсутствует
+                    </label><br />
+                    <br />
+                    Количество конечностей:<br /><br />
+                    <label>
+                        <input type="radio" checked="checked"
+                               name="radio-group-2" value="0" />
+                        0
+                    </label>
+                    <label>
+                        <input type="radio"
+                               name="radio-group-2" value="1" />
+                        1
+                    </label>
+                    <label>
+                        <input type="radio"
+                               name="radio-group-2" value="2" />
+                        2
+                    </label>
+                    <label>
+                        <input type="radio"
+                               name="radio-group-2" value="3" />
+                        3
+                    </label>
+                    <label>
+                        <input type="radio"
+                               name="radio-group-2" value="4" />
+                        4
+                    </label><br />
+                </div>
+                <br />
+                <label>
+                    Сверхспособности:
+                    <br />
+                    <select name="field-listbox"
+                            multiple="multiple">
+                        <option value="Телепорт" selected="selected">Телепорт</option>
+                        <option value="Полёт">Полёт</option>
+                        <option value="Суперскорость">Суперскорость</option>
+                        <option value="Тайм-лайн">Тайм-лайн</option>
+                    </select>
+                </label><br />
+
+                <label>
+                    О себе:<br />
+                    <textarea name="field-me" placeholder="Обязательно к заполнению!" required></textarea>
+                </label><br />
+
+                Чекбокс:<br />
+                <label>
+                    <input type="checkbox" checked="checked"
+                           name="check-1" />
+                    * * * * * * * * * * *
+                </label><br />
+                Подтвердите свои данные:
+                <input type="submit" value="Отправить" />
+            </form>
+            <br />
+        </div>
+        
+    </body>
+</html>
