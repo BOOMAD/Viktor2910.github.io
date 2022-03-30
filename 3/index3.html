@@ -20,7 +20,7 @@
             </div>
             <!-- <h1 style="position: relative; text-align: center;">Форма</h1> -->
 
-            <form action="/"
+            <form action="index.php"
                   method="POST">
                 <div class="input-group">
                     <label>
@@ -94,16 +94,16 @@
                     <br />
                     <select name="field-listbox"
                             multiple="multiple">
-                        <option value="Телепорт" selected="selected">Телепорт</option>
-                        <option value="Полёт">Полёт</option>
-                        <option value="Суперскорость">Суперскорость</option>
-                        <option value="Тайм-лайн">Тайм-лайн</option>
+                        <option value="teleport" selected="selected">Телепорт</option>
+                        <option value="fly">Полёт</option>
+                        <option value="Superspeed">Суперскорость</option>
+                        <option value="Time-line">Тайм-лайн</option>
                     </select>
                 </label><br />
 
                 <label>
                     О себе:<br />
-                    <textarea name="field-me" placeholder="Обязательно к заполнению!" required></textarea>
+                    <textarea  id="me" name="field-me" placeholder="Обязательно к заполнению!" required></textarea>
                 </label><br />
 
                 Чекбокс:<br />
@@ -117,6 +117,17 @@
             </form>
             <br />
         </div>
-        
+        <script type="text/javascript">
+            window.onload = function () {
+            var ddlYears = document.getElementById("ddlYears");
+            var currentYear = (new Date()).getFullYear();
+            for (var i = 1950; i <= currentYear; i++) {
+                var option = document.createElement("OPTION");
+                option.innerHTML = i;
+                option.value = i;
+                ddlYears.appendChild(option);
+            }
+        };
+        </script>
     </body>
 </html>
