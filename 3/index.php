@@ -116,7 +116,7 @@ if (!preg_match($mailreg, $email)) {
 	print_r('Неверный формат email');
 	exit();
 }
-if ($pol != = 'man' && $pol != = 'woman') {
+if ($pol != 'man' && $pol != 'woman') {
 	print_r('Неверный формат пола');
 	exit();
 }
