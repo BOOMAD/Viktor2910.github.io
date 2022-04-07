@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 	print_r('Применимы только методы POST');
 }
 $errors = FALSE;
-if (empty($_POST['field-name']) || empty($_POST['field-email']) || empty($_POST['year']) || empty($_POST['field-me']) || empty($_POST['check-1']) || $_POST['check-1'] == false || !isset($_POST['field-listbox'])) {
+if(empty($_POST['field-name']) || empty($_POST['field-email']) || empty($_POST['year']) || empty($_POST['field-me']) || empty($_POST['check-1']) || $_POST['check-1'] == false || !isset($_POST['field-listbox'])) {
 	print_r('Необходимо заполнить!');
 	exit();
 }
@@ -21,23 +21,23 @@ $mailreg = "/^[\w\.-]+@([\w-]+\.)+[\w-]{2,4}$/";
 $bioreg = "/^\s*\w+[\w\s\.,-]*$/";
 $list_sup = array('teleport', 'fly', 'Superspeed', 'Time-line');
 
-if (!preg_match($reg, $name)) {
+if(!preg_match($reg, $name)) {
 	print_r('Неверный формат имени');
 	exit();
 }
-if (!preg_match($mailreg, $email)) {
+if(!preg_match($mailreg, $email)) {
 	print_r('Неверный формат email');
 	exit();
 }
-if ($pol !== 'man' && $pol !== 'woman') {
+if($pol !== 'man' && $pol !== 'woman') {
 	print_r('Неверный формат пола');
 	exit();
 }
-if ($limbs < 1) {
+if($limbs < 1) {
 	print_r('Неверное кол-во конечностей');
 	exit();
 }
-if (!preg_match($bioreg, $bio)) {
+if(!preg_match($bioreg, $bio)) {
 	print_r('Неверный формат биографии');
 	exit();
 }
