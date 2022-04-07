@@ -83,4 +83,3 @@ catch (PDOException $e) {
 
 print_r("Данные отправлены в БД");
 ?>
->>>>>>> 341186a5d62d3d12a9dbcf4595c8cda19b0d564e
