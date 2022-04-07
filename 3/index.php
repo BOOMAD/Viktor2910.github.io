@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 	print_r('Применимы только методы POST');
 }
 $errors = FALSE;
-if (empty($_POST['field-name']) || empty($_POST['field-email']) || empty($_POST['field-DoB']) || empty($_POST['field-me']) || empty($_POST['check-1']) || $_POST['check-1'] == false || !isset($_POST['field-listbox'])) {
+if (empty($_POST['field-name']) || empty($_POST['field-email']) || empty($_POST['year']) || empty($_POST['field-me']) || empty($_POST['check-1']) || $_POST['check-1'] == false || !isset($_POST['field-listbox'])) {
 	print_r('Необходимо заполнить!');
 	exit();
 }
