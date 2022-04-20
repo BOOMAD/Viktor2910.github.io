@@ -220,10 +220,9 @@ if (!empty($messages)) {
       <div <?php if ($errors['check-1']) {print 'class="error"';} ?> >
       <label><input type="check-1" name="check-1"
 	<?php if($values['check-1']==TRUE){print 'checked';} ?> />
-        Я болею за Red Bull Racing</label><br />
+        **********</label><br />
       </div>
-
-      Если уверенны в своем ответе нажимайте:
+	    
       <input type="submit" value="Отправить" />
     </form>
    </div>
