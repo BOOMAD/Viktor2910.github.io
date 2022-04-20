@@ -1,7 +1,6 @@
 <style>
 
-{
-    padding:0;
+*{  padding:0;
     margin:0;
     box-sizing:border-box;
     text-decoration: none;
@@ -126,6 +125,7 @@ textarea {
     height: 150px;
 }
 </style>
+
 <?php
 if (!empty($messages)) {
   print('<div id="messages">');
