@@ -1,129 +1,12 @@
 <style>
-
-*{  padding:0;
-    margin:0;
-    box-sizing:border-box;
-    text-decoration: none;
-    list-style: none;
-}
-body {
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.form {
-    box-shadow: 0 0 15px #757575;
-    width: 350px;
-    margin: 10px;
-    background-color: #fff; /*rgb(182, 255, 0);*/
-}
-
-.header-form {
-    background: #b98348;
-    position: relative;
-    color: #fff;
+  .form{
+    max-width: 960px;
     text-align: center;
-}
-
-    .header-form::after {
-        content: "";
-        position: absolute;
-        display: block;
-        margin: auto;
-        width: 0;
-        height: 0;
-        left: 0;
-        right: 0;
-        bottom: -20px;
-        border-bottom: 10px solid rgba(0,0,0,0);
-        border-left: 10px solid rgba(0,0,0,0);
-        border-right: 10px solid rgba(0,0,0,0);
-        border-top: 10px solid #b98348;
-    }
-.input-group{
-    position:relative;
-    margin-bottom: 15px;
-    width:100%;
-}
-.form form{
-    padding: 30px;
-}
-.header-form span{
-    background: #b98348;
-    width:90%;
-    display: block;
-    padding: 10px;
-    font-size: 24px;
-    text-align: left;
-}
-.input-group label{
-    font-size:20px;
-}
-form {
-    font-family: Impact;
-}
-
-label {
-    margin: 10px 15;
-}
-
-input[type=text] {
-    padding: 10px;
-    margin: 10px 0;
-    border: 1;
-    border-radius: 15px;
-    box-shadow: 0 0 15px 4px rgb(182, 255, 0);
-}
-
-input[type=email] {
-    padding: 10px;
-    margin: 10px 0;
-    border: 1;
-    border-radius: 15px;
-    box-shadow: 0 0 15px 4px rgb(182, 255, 0);
-}
-
-input[type=date] {
-    padding: 10px;
-    margin: 10px 0;
-    border: 1;
-    border-radius: 15px;
-    box-shadow: 0 0 15px 4px rgb(182, 255, 0);
-}
-
-input[type=checkbox] {
-    padding: 10px;
-    margin: 10px 15;
-    border: 1;
-    border-radius: 15px;
-    box-shadow: 0 0 15px 6px rgb(255, 0, 0);
-}
-
-input[type=submit] {
-    padding: 10px;
-    margin: 10px 0;
-    border: 1;
-    border-radius: 15px;
-    box-shadow: 0 0 15px 4px rgb(182, 255, 0);
-}
-
-select {
-    padding: 10px;
-    border-radius: 10px;
-}
-
-textarea {
-    resize: none;
-    /*resize: vertical;*/
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 15px;
-    border: 1;
-    box-shadow: 4px 4px 10px rgb(182, 255, 0);
-    height: 150px;
-}
+    margin: 0 auto;
+  }
+  .error {
+    border: 2px solid red;
+  }
 </style>
 
 <?php
@@ -137,7 +20,7 @@ if (!empty($messages)) {
 }
 ?>
 <body>
-   <div id="form">
+   <div class="form">
     <h1>Форма контракта</h1>
 
     <form action="index.php" method="POST">
