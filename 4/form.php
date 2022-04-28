@@ -23,34 +23,6 @@ body {
 
   background : #222;
 }
-
-form {
-  position: relative;
-
-  width  : 740px;
-  height : 498px;
-  margin : 0 auto;
-
-  background: #FFF url(background.jpg);
-}
-	h1 {
-  position : absolute;
-  left : 415px;
-  top  : 185px;
-
-  font : 1em "typewriter", sans-serif;
-}
-
-#from {
-  position: absolute;
-  left : 398px;
-  top  : 235px;
-}
-#message {
-  position: absolute;
-  left : 20px;
-  top  : 70px;
-}
   .error {
     border: 2px solid red;
   }
