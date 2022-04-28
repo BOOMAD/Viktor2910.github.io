@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 		$messages[] = 'Спасибо, результаты сохранены.';
 	  }
 	$errors= array();
-	$errors['field-name'] = !empty(&_COOKIE['field-name_error']);
+	$errors['field-name'] = !empty($_COOKIE['field-name_error']);
 	$errors['field-email'] = !empty(&_COOKIE['field-email_error']);
 	$errors['year'] = !empty(&_COOKIE['year_error']);
 	$errors['radio-group-1'] = !empty($_COOKIE['radio-group-1_error']);
