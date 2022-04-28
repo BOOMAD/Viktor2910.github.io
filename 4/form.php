@@ -83,10 +83,6 @@ if (!empty($messages)) {
         <textarea name="field-me"> <?php print $values['field-me']; ?> </textarea>
       <br />
 
-      <div  <?php if ($errors['privacy']) {print 'class="error"';} ?> >
-    <input name="priv" type="checkbox"<?php if($values['privacy']==TRUE){print 'checked';} ?>> Вы согласны с пользовательским соглашением <br>
-    </div>
-
       <div <?php if ($errors['check-1']) {print 'class="error"';} ?> >
       <input type="checkbox" name="check-1" <?php if($values['check-1']==TRUE){print 'checked';} ?> />
         **********<br />
