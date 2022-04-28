@@ -44,6 +44,11 @@ input, textarea {
 
   background: none;
 }
+input:focus, textarea:focus {
+  background   : rgba(0,0,0,.1);
+  border-radius: 5px;
+  outline      : none;
+}
   .error {
     border: 2px solid red;
   }
