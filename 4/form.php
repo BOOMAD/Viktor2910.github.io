@@ -23,6 +23,16 @@ body {
 
   background : #222;
 }
+
+form {
+  position: relative;
+
+  width  : 740px;
+  height : 498px;
+  margin : 0 auto;
+
+  background: #FFF url(background.jpg);
+}
   .error {
     border: 2px solid red;
   }
