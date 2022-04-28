@@ -33,6 +33,9 @@ form {
 
   background: #FFF url(background.jpg);
 }
+	label {
+  font : .8em "typewriter", sans-serif;
+}
   .error {
     border: 2px solid red;
   }
