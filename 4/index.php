@@ -78,8 +78,8 @@ else{
 	$errors = FALSE;
   if ((empty($_POST['field-name'])) || (!preg_match($reg,$_POST['field-name']))) {
     print_r('Неверный формат имени');
-    setcookie('name_error', '1', time() + 24 * 60 * 60);
-    setcookie('name_value', '', 100000);
+    setcookie('field-name_error', '1', time() + 24 * 60 * 60);
+    setcookie('field-name_value', '', 100000);
     $errors = TRUE;
   }
   
@@ -87,8 +87,8 @@ else{
    	setcookie('field-name_value', $_POST['field-name'], time() + 30 * 24 * 60 * 60 * 12);
 	setcookie('field-name_error', '', 100000);
   }
-
-  if (empty($_POST['field-email'])) || (!preg_match($mailreg,$_POST['field-email']))) {print_r('Неверный формат email');
+  if ((empty($_POST['field-email'])) || (!preg_match($mailreg,$_POST['field-email']))) {
+    print_r('Неверный формат email');
     setcookie('field-email_error', '1', time() + 24 * 60 * 60);
     setcookie('field-email_value', '', 100000);
     $errors = TRUE;
