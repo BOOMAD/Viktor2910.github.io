@@ -76,8 +76,9 @@ else{
 	$bioreg = "/^\s*\w+[\w\s\.,-]*$/";
 	
 	$errors = FALSE;
-
-  if (empty($_POST['field-name'])) || (!preg_match($reg,$_POST['field-name']))) {print_r('Неверный формат имени');
+	
+  if (empty($_POST['field-name'])) || (!preg_match($reg,$_POST['field-name']))) {
+	  print_r('Неверный формат имени');
    	setcookie('field-name_error', '1', time() + 24 * 60 * 60);
 	setcookie('field-name_value', '', 100000);
     $errors = TRUE;
