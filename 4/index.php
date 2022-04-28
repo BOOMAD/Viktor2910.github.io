@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 	$errors['year'] = !empty($_COOKIE['year_error']);
 	$errors['radio-group-1'] = !empty($_COOKIE['radio-group-1_error']);
 	$errors['radio-group-2'] = !empty($_COOKIE['radio-group-2_error']);
-	$errors['field-me'] = !empty(&_COOKIE['field-me_error']);
+	$errors['field-me'] = !empty($_COOKIE['field-me_error']);
 	$errors['field-listbox'] = !empty(&_COOKIE['field-listbox_error']);
 	$errors['check-1'] = !empty($_COOKIE['check-1_error']);
 
