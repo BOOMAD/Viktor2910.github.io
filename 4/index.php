@@ -127,10 +127,10 @@ else{
     setcookie('radio-group-2_value', $_POST['radio-group-2'], time() + 12 * 30 * 24 * 60 * 60);
     setcookie('radio-group-2_error','',100000);
  }
-
-  if (empty($_POST['field-me'])) || (!preg_match($bioreg,$_POST['field-me']))) {print_r('Неверный формат биографии');
+  if ((empty($_POST['field-me'])) || (!preg_match($bioreg,$_POST['field-me']))) {
+    print_r('Неверный формат биографии');
     setcookie('field-me_error', '1', time() + 24 * 60 * 60);
-	setcookie('field-me_value', '', 100000);
+    setcookie('field-me_value', '', 100000);
     $errors = TRUE;
   }
   else {
