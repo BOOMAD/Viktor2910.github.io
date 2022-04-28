@@ -25,21 +25,12 @@ if (!empty($messages)) {
     <h1>Форма контракта</h1>
 
     <form action="index.php" method="POST">
-
-      <label>
-        Имя:</label><br />
-        <input type="text" name="field-name" <?php if ($errors['field-name']) {print 'class="error"';} ?>
+      <label>Имя:</label><br />
+      <input name="field-name" <?php if ($errors['field-name']) {print 'class="error"';} ?>
           value="<?php print $values['field-name']; ?>" />
       <br />
-
-      <label>
-        Еmail:</label><br />
-        <input name="field-email" type="email"
-          value="<?php print $values['field-email']; ?>"
-	<?php if ($errors['field-email']) {print 'class="error"';} ?>
-	/>
-      <br />
-
+      <label> Еmail:</label><br />
+        <input name="field-email" type="email" <?php if ($errors['field-email']) {print 'class="error"';} ?> value="<?php print $values['field-email']; ?>"/><br />
       <label>
         Год рождения:</label><br />
         <select name="year" <?php if ($errors['year']) {print 'class="error"';} ?>> 
@@ -56,8 +47,7 @@ if (!empty($messages)) {
           ?>
          </select>
       <br />
-	  
-	<label>  Пол: </label><br />
+      <label>  Пол: </label><br />
      <div <?php if ($errors['radio-group-1']) {print 'class="error"';} ?>>
        <input type="radio" name="radio-group-1" value="man" 
 	<?php if($values['radio-group-1']=="man") {print 'checked';} ?> />
@@ -67,6 +57,7 @@ if (!empty($messages)) {
         Женский<br />
      </div>
 		
+
 	<label>  Количество конечностей:</label><br />
      <div <?php if ($errors['radio-group-2']) {print 'class="error"';} ?>>
       <input type="radio" name="radio-group-2" value="1" 
@@ -83,10 +74,15 @@ if (!empty($messages)) {
         4<br />
       </div>
 		
-	  <label>
-        Сверхспособности:</label>
-        <br />
-        <select name="field-listbox[]" multiple="multiple"
+      <label> Выберите суперспособности </label> <br>
+    <select name="power[]" size="3" multiple <?php if ($errors['powers']) {print 'class="error"';} ?>>
+      <option value="бессмертие" <?php if($values['immortal']==1){print 'selected';} ?>>Бессмертие</option>
+      <option value="прохождение сквозь стены" <?php if($values['ghost']==1){print 'selected';} ?>>Прохождение сквозь стены</option>
+      <option value="левитация" <?php if($values['levitation']==1){print 'selected';} ?>>Левитация</option>
+    </select> <br>
+
+	  <label> Сверхспособности:</label> <br />
+        <select name="field-listbox[]" size="4" multiple="multiple"
 	  <?php if ($errors['field-listbox']) {print 'class="error"';} ?> >
           <option value="teleport" <?php if($values['teleport']==1){print 'selected';} ?> > Телепорт</option>
           <option value="fly" <?php if ($values['fly']==1){print 'selected';} ?> > Полёт</option>
@@ -94,15 +90,18 @@ if (!empty($messages)) {
 	        <option value="Time-line" <?php if ($values['Time-line']==1){print 'selected';} ?> > Тайм-лайн</option>
         </select>
       <br />
-	  
+          
       <label>
         Биография:</label><br />
         <textarea name="field-me"> <?php print $values['field-me']; ?> </textarea>
       <br />
 
-      <label>Чекбокс:</label><br />
+      <div  <?php if ($errors['privacy']) {print 'class="error"';} ?> >
+    <input name="priv" type="checkbox"<?php if($values['privacy']==TRUE){print 'checked';} ?>> Вы согласны с пользовательским соглашением <br>
+    </div>
+
       <div <?php if ($errors['check-1']) {print 'class="error"';} ?> >
-      <input type="check-1" name="check-1"
+      <input type="checkbox" name="check-1"
 	<?php if($values['check-1']==TRUE){print 'checked';} ?> />
         **********<br />
       </div>
