@@ -70,27 +70,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 	include('form.php');
 }
 else{
+	
+	$reg = "/^\w+[\w\s-]*$/";
+	$mailreg = "/^[\w\.-]+@([\w-]+\.)+[\w-]{2,4}$/";
+	$bioreg = "/^\s*\w+[\w\s\.,-]*$/";
+	
 	$errors = FALSE;
 
-  if (empty($_POST['field-name'])) {
-	print_r('Неверный формат имени');
-    setcookie('field-name_error', '1', time() + 24 * 60 * 60);
+  if (empty($_POST['field-name'])) || (!preg_match($reg,$_POST['field-name']))) {print_r('Неверный формат имени');
+   	setcookie('field-name_error', '1', time() + 24 * 60 * 60);
 	setcookie('field-name_value', '', 100000);
     $errors = TRUE;
   }
   else {
-    setcookie('field-name_value', $_POST['field-name'], time() + 30 * 24 * 60 * 60 * 12);
+   	setcookie('field-name_value', $_POST['field-name'], time() + 30 * 24 * 60 * 60 * 12);
 	setcookie('field-name_error', '', 100000);
   }
 
-  if (empty($_POST['field-email'])) {
-	print_r('Неверный формат email');
+  if (empty($_POST['field-email'])) || (!preg_match($mailreg,$_POST['field-email']))) {print_r('Неверный формат email');
     setcookie('field-email_error', '1', time() + 24 * 60 * 60);
-	setcookie('field-email_value', '', 100000);
+    setcookie('field-email_value', '', 100000);
     $errors = TRUE;
   }
   else {
-    setcookie('field-email_value', $_POST['field-email'], time() + 30 * 24 * 60 * 60 * 12);
+    	setcookie('field-email_value', $_POST['field-email'], time() + 30 * 24 * 60 * 60 * 12);
 	setcookie('field-email_error', '', 100000);
   }
 
@@ -124,8 +127,7 @@ else{
     setcookie('radio-group-2_error','',100000);
  }
 
-  if (empty($_POST['field-me'])) {
-	print_r('Неверный формат биографии');
+  if (empty($_POST['field-me'])) || (!preg_match($bioreg,$_POST['field-me']))) {print_r('Неверный формат биографии');
     setcookie('field-me_error', '1', time() + 24 * 60 * 60);
 	setcookie('field-me_value', '', 100000);
     $errors = TRUE;
