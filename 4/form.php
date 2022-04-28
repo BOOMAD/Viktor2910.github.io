@@ -14,56 +14,94 @@
     font-weight: normal;
     font-style: normal;
 }
-* {
-   box-sizing: border-box;
-}
-body {
-   background: #F5E9D9;
-}
+* {box-sizing: border-box;}
 .form1 {
-   max-width: 350px;
-   margin: 50px auto 0;
-   padding: 20px;
-   background: #fffdee;
-   border: 10px solid transparent;
-   border-image: 10 repeating-linear-gradient(135deg, #C42061, #C42061 10px, transparent 10px, transparent 20px, #FBCFDF 20px, #FBCFDF 30px, transparent 30px, transparent 40px);
-   font-family: 'Playfair Display';
-   color: #605756;
+  max-width: 350px;
+  margin: 50px auto 0;
+  padding: 20px;
+  background: #E4E3DF;
+  font-family: 'Oswald', sans-serif;
+}
+.stripes-block {
+  position: relative;
+  padding: 15px;
+  margin-bottom: 20px;
+  background: repeating-linear-gradient(-45deg, #E4E3DF, #E4E3DF 5px, #909090 6px, #909090 8px);
+  border-bottom: 2px solid #909090;
+}
+.stripes-block:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  margin-left: -6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fffffe;
+  box-shadow: 0 0 0 1px #090606, 0 0 0 12px #9c8778;
 }
 .form {
-   margin-bottom: 15px;
+  position: relative;
+  padding: 10px;
+  border-bottom: 2px solid #909090;
 }
-.form input[type="text"], .form-row input[type="email"], .form-row textarea {
-   width: 100%;
-   padding: 0 10px;
-   line-height: 35px;
-   border-width: 0;
-   outline: none;
-   background: transparent url(https://html5book.ru/wp-content/uploads/2016/12/bg-form.png) bottom left repeat-x;
-   background-size: 8px 35px;
-   font-family: 'Playfair Display';
+.form label {
+  display: block;
+}
+.form input {
+  display: block;
+  width: 100%;
+  padding: 0;
+  line-height: 30px;
+  border-width: 0;
+  background: #E4E3DF;
 }
 .form textarea {
-   background-attachment: local;
-   background-repeat: repeat;
-   resize: none;
+  width: 100%;
+  margin-bottom:40px;
+  padding: 0;
+  outline: 0;
+  line-height: 40px;
+  background: transparent url(https://html5book.ru/wp-content/uploads/2016/12/bg-form.png) bottom left repeat-x;
+  background-size: 8px 40px;
+  letter-spacing: 0.2em;
+  background-attachment: local;
+  background-repeat: repeat;
+  border-width: 0;
+  resize: none;
 }
-.form input[type="submit"] {
-   padding: 10px 20px;
-   margin-top: 10px;
-   background: #F67CA5;
-   border-width: 0;
-   cursor: pointer;
-   outline: none;
-   font-family: 'Playfair Display';
-   font-size: 13px;
-   letter-spacing: 1px;
-   color: #fffdee;
-   text-transform: uppercase;
-   transition: 1s cubic-bezier(.165, .84, .44, 1);
+.form-icon {
+  position: relative;
+  border-bottom: 2px solid #909090;
 }
-.form input[type=submit]:hover {
-   background: #C42061;
+.form-icon .fa {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #909090;
+  color: #E4E3DF;
+  border-bottom: 2px solid;
+}
+.form-icon input {
+  display: block;
+  width: 100%;
+  padding: 0 10px 0 50px;
+  line-height: 40px;
+  box-sizing: border-box;
+  border-width: 0;
+  background: #E4E3DF;
+}
+.form-icon .fa-paper-plane-o {
+  border-bottom-color: #909090;
+  cursor: pointer;
+}
+.form-icon input[type="submit"] {
+  cursor: pointer;
 }
 .error {
     border: 2px solid red;
