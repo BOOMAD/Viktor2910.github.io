@@ -6,13 +6,13 @@ body {
    background: #e6f4fd;
    font-family: 'Roboto', sans-serif;
 }
-.form1 {
+.form {
    max-width: 350px;
    padding: 80px 30px 30px;
    margin: 50px auto 30px;
    background: white;
 }
-.form1 h1 {
+.form h1 {
    position: relative;
    z-index: 5;
    margin: 0 0 60px;
@@ -21,7 +21,7 @@ body {
    font-size: 30px;
    font-weight: normal;
 }
-.form1 h1:before {
+.form h1:before {
    content: "";
    position: absolute;
    z-index: -1;
@@ -32,7 +32,7 @@ body {
    border-radius: 50%;
    background: #fee8e4;
 }
-.form1 h1:after {
+.form h1:after {
    content: "";
    position: absolute;
    z-index: -1;
@@ -44,43 +44,7 @@ body {
    border-right: 55px solid transparent;
    border-bottom: 90px solid #ffe3b5;
 }
-.form {
-   position: relative;
-   margin-bottom: 40px;
-}
-.form input {
-   display: block;
-   width: 100%;
-   padding: 0 10px;
-   line-height: 40px;
-   font-family: 'Roboto', sans-serif;
-   background: none;
-   border-width: 0;
-   border-bottom: 2px solid #4a90e2;
-   transition: all 0.2s ease;
-}
-.form label {
-   position: absolute;
-   left: 13px;
-   color: #9d959d;
-   font-size: 20px;
-   font-weight: 300;
-   transform: translateY(-35px);
-   transition: all 0.2s ease;
-}
-.form input:focus {
-   outline: 0;
-   border-color: #F77A52;
-}
-.form input:focus+label, .form-row input:valid+label {
-   transform: translateY(-60px);
-   margin-left: -14px;
-   font-size: 14px;
-   font-weight: 400;
-   outline: 0;
-   border-color: #F77A52;
-   color: #F77A52;
-}
+
 .form1 input[type="submit"] {
    width: 100%;
    padding: 0;
