@@ -8,7 +8,8 @@
     border: 2px solid red;
   }
 </style>
-
+<body>
+	
 <?php
 if (!empty($messages)) {
   print('<div id="messages">');
@@ -19,7 +20,7 @@ if (!empty($messages)) {
   print('</div>');
 }
 ?>
-<body>
+
    <div class="form">
     <h1>Форма контракта</h1>
 
