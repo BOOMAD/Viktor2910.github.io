@@ -14,11 +14,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 	$error['field-name'] = !empty(&_COOKIE['field-name_error']);
 	$error['field-email'] = !empty(&_COOKIE['field-email_error']);
 	$error['year'] = !empty(&_COOKIE['year_error']);
-	$errors['radio-group-1'] = !empty($_COOKIE['radio-group-1_error']);
-	$errors['radio-group-2'] = !empty($_COOKIE['radio-group-2_error']);
+	$error['radio-group-1'] = !empty($_COOKIE['radio-group-1_error']);
+	$error['radio-group-2'] = !empty($_COOKIE['radio-group-2_error']);
 	$error['field-me'] = !empty(&_COOKIE['field-me_error']);
 	$error['field-listbox'] = !empty(&_COOKIE['field-listbox_error']);
-	$errors['check-1'] = !empty($_COOKIE['check-1_error']);
+	$error['check-1'] = !empty($_COOKIE['check-1_error']);
 
   	// TODO: аналогично все поля.
 	  if ($errors['field-name']) {
