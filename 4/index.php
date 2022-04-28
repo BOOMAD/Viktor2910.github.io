@@ -82,7 +82,6 @@ else{
     setcookie('field-name_value', '', 100000);
     $errors = TRUE;
   }
-  
   else {
    	setcookie('field-name_value', $_POST['field-name'], time() + 30 * 24 * 60 * 60 * 12);
 	setcookie('field-name_error', '', 100000);
