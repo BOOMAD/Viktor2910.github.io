@@ -67,12 +67,6 @@ if (!empty($messages)) {
         4<br />
       </div>
 		
-      <label> Выберите суперспособности </label> <br>
-    <select name="power[]" size="3" multiple <?php if ($errors['powers']) {print 'class="error"';} ?>>
-      <option value="бессмертие" <?php if($values['immortal']==1){print 'selected';} ?>>Бессмертие</option>
-      <option value="прохождение сквозь стены" <?php if($values['ghost']==1){print 'selected';} ?>>Прохождение сквозь стены</option>
-      <option value="левитация" <?php if($values['levitation']==1){print 'selected';} ?>>Левитация</option>
-    </select> <br>
 
 	  <label> Сверхспособности:</label> <br />
         <select name="field-listbox[]" size="4" multiple="multiple"
