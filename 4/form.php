@@ -28,7 +28,7 @@ if (!empty($messages)) {
     
       <label>Имя:</label><br />
       <input type="text" name="field-name" placeholder="Name" <?php if ($errors['field-name']) {print 'class="error"';} ?>
-	     value="<?php print $values['field-name']; ?>" />
+	     value="<?php print $values['field-name_value']; ?>" />
       <br />
       <label> Еmail:</label><br />
         <input name="field-email" type="email" <?php if ($errors['field-email']) {print 'class="error"';} ?> value="<?php print $values['field-email']; ?>"/><br />
