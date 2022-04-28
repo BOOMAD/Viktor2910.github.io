@@ -83,8 +83,9 @@ else{
     $errors = TRUE;
   }
   else {
-   	setcookie('field-name_value', $_POST['field-name'], time() + 30 * 24 * 60 * 60 * 12);
-	setcookie('field-name_error', '', 100000);
+    // Сохраняем ранее введенное в форму значение на год.
+    setcookie('field-name_value', $_POST['field-name'], time() + 12 * 30 * 24 * 60 * 60);
+    setcookie('field-name_error', '', 100000);
   }
   if ((empty($_POST['field-email'])) || (!preg_match($mailreg,$_POST['field-email']))) {
     print_r('Неверный формат email');
