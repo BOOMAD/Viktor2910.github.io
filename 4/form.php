@@ -1,19 +1,4 @@
 <style>
-  @font-face {
-    font-family: 'handwriting';
-    src: url('fonts/journal-webfont.woff2') format('woff2'),
-         url('fonts/journal-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'typewriter';
-    src: url('fonts/veteran_typewriter-webfont.woff2') format('woff2'),
-         url('fonts/veteran_typewriter-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 * {box-sizing: border-box;}
 .form1 {
   max-width: 350px;
