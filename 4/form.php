@@ -1,92 +1,100 @@
 <style>
-* {box-sizing: border-box;}
+* {
+   box-sizing: border-box;
+}
 .form1 {
-  max-width: 350px;
-  margin: 50px auto 0;
-  padding: 20px;
-  background: #E4E3DF;
-  font-family: 'Oswald', sans-serif;
+   position: relative;
+   max-width: 400px;
+   padding: 60px 50px;
+   margin: 50px auto 0;
+   background-image: url(https://html5book.ru/wp-content/uploads/2017/01/photo-roses.jpg);
+   background-size: cover;
 }
-.stripes-block {
-  position: relative;
-  padding: 15px;
-  margin-bottom: 20px;
-  background: repeating-linear-gradient(-45deg, #E4E3DF, #E4E3DF 5px, #909090 6px, #909090 8px);
-  border-bottom: 2px solid #909090;
-}
-.stripes-block:before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 8px;
-  margin-left: -6px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #fffffe;
-  box-shadow: 0 0 0 1px #090606, 0 0 0 12px #9c8778;
+.form1:before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: linear-gradient(to right bottom, rgba(43, 44, 78, .5), rgba(104, 22, 96, .5));
 }
 .form {
-  position: relative;
-  padding: 10px;
-  border-bottom: 2px solid #909090;
+   position: relative;
+}
+.form h1 {
+   position: relative;
+   margin-top: 0;
+   color: white;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 300;
+   font-size: 26px;
+   text-transform: uppercase;
+}
+.form h1:after {
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: -6px;
+   height: 2px;
+   width: 60px;
+   background: #1762EE;
 }
 .form label {
-  display: block;
+   display: block;
+   padding-left: 15px;
+   font-family: 'Roboto', sans-serif;
+   color: rgba(255, 255, 255, .6);
+   text-transform: uppercase;
+   font-size: 14px;
 }
 .form input {
-  display: block;
-  width: 100%;
-  padding: 0;
-  line-height: 30px;
-  border-width: 0;
-  background: #E4E3DF;
+   display: block;
+   width: 100%;
+   padding: 0 15px;
+   margin: 10px 0 15px;
+   border-width: 0;
+   line-height: 40px;
+   border-radius: 20px;
+   color: white;
+   background: rgba(255, 255, 255, .2);
+   font-family: 'Roboto', sans-serif;
 }
-.form textarea {
-  width: 100%;
-  margin-bottom:40px;
-  padding: 0;
-  outline: 0;
-  line-height: 40px;
-  background: transparent url(https://html5book.ru/wp-content/uploads/2016/12/bg-form.png) bottom left repeat-x;
-  background-size: 8px 40px;
-  letter-spacing: 0.2em;
-  background-attachment: local;
-  background-repeat: repeat;
-  border-width: 0;
-  resize: none;
+.form input[type="checkbox"] {
+   position: absolute;
+   opacity: 0;
 }
-.form-icon {
-  position: relative;
-  border-bottom: 2px solid #909090;
+#custom-checkbox+label {
+   position: relative;
+   margin: 20px 0;
+   text-transform: none;
+   cursor: pointer;
 }
-.form-icon .fa {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  background: #909090;
-  color: #E4E3DF;
-  border-bottom: 2px solid;
+#custom-checkbox+label:before {
+   content: "";
+   display: inline-block;
+   width: 20px;
+   height: 20px;
+   margin-right: 10px;
+   vertical-align: text-top;
+   background: white;
 }
-.form-icon input {
-  display: block;
-  width: 100%;
-  padding: 0 10px 0 50px;
-  line-height: 40px;
-  box-sizing: border-box;
-  border-width: 0;
-  background: #E4E3DF;
+#custom-checkbox:checked+label:before {
+   background: #1762EE;
 }
-.form-icon .fa-paper-plane-o {
-  border-bottom-color: #909090;
-  cursor: pointer;
+#custom-checkbox:checked+label:after {
+   content: "";
+   position: absolute;
+   width: 2px;
+   height: 2px;
+   left: 20px;
+   top: 9px;
+   background: white;
+   box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+   transform: rotate(45deg);
 }
-.form-icon input[type="submit"] {
-  cursor: pointer;
+.form input[type="submit"] {
+   background: #1762EE;
 }
 .error {
     border: 2px solid red;
