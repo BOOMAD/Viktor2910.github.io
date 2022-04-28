@@ -14,24 +14,12 @@
     font-weight: normal;
     font-style: normal;
 }
-
-body {
-  font  : 21px sans-serif;
-
-  padding : 2em;
-  margin  : 0;
-
-  background : #222;
-}
-
-form {
-  position: relative;
-
-  width  : 740px;
-  height : 498px;
-  margin : 0 auto;
-
-  background: #FFF url(background.jpg);
+.form {
+   max-width: 350px;
+   margin: 50px auto 0;
+   padding: 20px;
+   background: #FAAB1B;
+   font-family: 'Oswald', sans-serif;
 }
 label {
   font : .8em "typewriter", sans-serif;
