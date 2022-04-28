@@ -54,12 +54,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 		$messages[] = '<div class="error">Вы должны болеть за Red Bull Racing.</div>';
 	  }
 	$values = array();
-	$values['field-name'] = empty($_COOKIE['field-name_value']) ? " : $_COOKIE['field-name_value'];
-	$values['field-email'] = empty($_COOKIE['field-email_value']) ? " : $_COOKIE['field-email_value'];
-	$values['year'] = empty($_COOKIE['year_value']) ? 0 : $_COOKIE['year_value'];
-	$values['radio-group-1'] = empty($_COOKIE['radio-group-1_value']) ? " : $_COOKIE['radio-group-1_value'];
-  	$values['radio-group-2'] = empty($_COOKIE['radio-group-2_value']) ? " : $_COOKIE['radio-group-2_value'];
-	$values['field-me'] = empty($_COOKIE['field-me_value']) ? " : $_COOKIE['field-me_value'];
+	$values['field-name'] = empty($_COOKIE['field-name_value']) ? '' : $_COOKIE['field-name_value'];
+	$values['field-email'] = empty($_COOKIE['field-email_value']) ? '' : $_COOKIE['field-email_value'];
+	$values['year'] = empty($_COOKIE['year_value']) ? '' : $_COOKIE['year_value'];
+	$values['radio-group-1'] = empty($_COOKIE['radio-group-1_value']) ? '' : $_COOKIE['radio-group-1_value'];
+  	$values['radio-group-2'] = empty($_COOKIE['radio-group-2_value']) ? '' : $_COOKIE['radio-group-2_value'];
+	$values['field-me'] = empty($_COOKIE['field-me_value']) ? '' : $_COOKIE['field-me_value'];
 	$values['teleport'] = empty($_COOKIE['teleport_value']) ? 0 : $_COOKIE['teleport_value'];
   	$values['fly'] = empty($_COOKIE['fly_value']) ? 0 : $_COOKIE['fly_value'];
   	$values['Superspeed'] = empty($_COOKIE['Superspeed_value']) ? 0 : $_COOKIE['Superspeed_value'];
