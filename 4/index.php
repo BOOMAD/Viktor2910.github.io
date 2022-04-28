@@ -60,7 +60,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 	$values['radio-group-1'] = empty($_COOKIE['radio-group-1_value']) ? " : $_COOKIE['radio-group-1_value'];
   	$values['radio-group-2'] = empty($_COOKIE['radio-group-2_value']) ? " : $_COOKIE['radio-group-2_value'];
 	$values['field-me'] = empty($_COOKIE['field-me_value']) ? " : $_COOKIE['field-me_value'];
-
 	$values['teleport'] = empty($_COOKIE['teleport_value']) ? 0 : $_COOKIE['teleport_value'];
   	$values['fly'] = empty($_COOKIE['fly_value']) ? 0 : $_COOKIE['fly_value'];
   	$values['Superspeed'] = empty($_COOKIE['Superspeed_value']) ? 0 : $_COOKIE['Superspeed_value'];
