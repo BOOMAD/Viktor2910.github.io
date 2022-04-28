@@ -26,8 +26,7 @@ if (!empty($messages)) {
 
     <form action="index.php" method="POST">
       <label>Имя:</label><br />
-      <input name="field-name" <?php if ($errors['field-name']) {print 'class="error"';} ?>
-          value="<?php print $values['field-name']; ?>" />
+      <input name="field-name" <?php if ($errors['field-name']) {print 'class="error"';} ?> value="<?php print $values['field-name']; ?>" />
       <br />
       <label> Еmail:</label><br />
         <input name="field-email" type="email" <?php if ($errors['field-email']) {print 'class="error"';} ?> value="<?php print $values['field-email']; ?>"/><br />
@@ -49,28 +48,22 @@ if (!empty($messages)) {
       <br />
       <label>  Пол: </label><br />
      <div <?php if ($errors['radio-group-1']) {print 'class="error"';} ?>>
-       <input type="radio" name="radio-group-1" value="man" 
-	<?php if($values['radio-group-1']=="man") {print 'checked';} ?> />
+       <input type="radio" name="radio-group-1" value="man" <?php if($values['radio-group-1']=="man") {print 'checked';} ?> />
         Мужской 
-      <input type="radio" name="radio-group-1" value="woman" 
-	<?php if($values['radio-group-1']=="woman") {print 'checked';} ?> />
+      <input type="radio" name="radio-group-1" value="woman" <?php if($values['radio-group-1']=="woman") {print 'checked';} ?> />
         Женский<br />
      </div>
 		
 
 	<label>  Количество конечностей:</label><br />
      <div <?php if ($errors['radio-group-2']) {print 'class="error"';} ?>>
-      <input type="radio" name="radio-group-2" value="1" 
-	<?php if($values['radio-group-2']=="1") {print 'checked';} ?> />
+      <input type="radio" name="radio-group-2" value="1" <?php if($values['radio-group-2']=="1") {print 'checked';} ?> />
         1
-      <input type="radio"name="radio-group-2" value="2" 
-	<?php if($values['radio-group-2']=="2") {print 'checked';} ?> />
+      <input type="radio"name="radio-group-2" value="2" <?php if($values['radio-group-2']=="2") {print 'checked';} ?> />
         2
-      <input type="radio" name="radio-group-2" value="3" 
-	<?php if($values['radio-group-2']=="3") {print 'checked';} ?> />
+      <input type="radio" name="radio-group-2" value="3" <?php if($values['radio-group-2']=="3") {print 'checked';} ?> />
         3
-      <input type="radio" name="radio-group-2" value="4" 
-	<?php if($values['radio-group-2']=="4") {print 'checked';} ?> />
+      <input type="radio" name="radio-group-2" value="4" <?php if($values['radio-group-2']=="4") {print 'checked';} ?> />
         4<br />
       </div>
 		
@@ -101,8 +94,7 @@ if (!empty($messages)) {
     </div>
 
       <div <?php if ($errors['check-1']) {print 'class="error"';} ?> >
-      <input type="checkbox" name="check-1"
-	<?php if($values['check-1']==TRUE){print 'checked';} ?> />
+      <input type="checkbox" name="check-1" <?php if($values['check-1']==TRUE){print 'checked';} ?> />
         **********<br />
       </div>
 	    
