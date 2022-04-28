@@ -14,15 +14,56 @@
     font-weight: normal;
     font-style: normal;
 }
-.form {
+* {
+   box-sizing: border-box;
+}
+body {
+   background: #F5E9D9;
+}
+.form1 {
    max-width: 350px;
    margin: 50px auto 0;
    padding: 20px;
-   background: #FAAB1B;
-   font-family: 'Oswald', sans-serif;
+   background: #fffdee;
+   border: 10px solid transparent;
+   border-image: 10 repeating-linear-gradient(135deg, #C42061, #C42061 10px, transparent 10px, transparent 20px, #FBCFDF 20px, #FBCFDF 30px, transparent 30px, transparent 40px);
+   font-family: 'Playfair Display';
+   color: #605756;
 }
-label {
-  font : .8em "typewriter", sans-serif;
+.form {
+   margin-bottom: 15px;
+}
+.form input[type="text"], .form-row input[type="email"], .form-row textarea {
+   width: 100%;
+   padding: 0 10px;
+   line-height: 35px;
+   border-width: 0;
+   outline: none;
+   background: transparent url(https://html5book.ru/wp-content/uploads/2016/12/bg-form.png) bottom left repeat-x;
+   background-size: 8px 35px;
+   font-family: 'Playfair Display';
+}
+.form textarea {
+   background-attachment: local;
+   background-repeat: repeat;
+   resize: none;
+}
+.form input[type="submit"] {
+   padding: 10px 20px;
+   margin-top: 10px;
+   background: #F67CA5;
+   border-width: 0;
+   cursor: pointer;
+   outline: none;
+   font-family: 'Playfair Display';
+   font-size: 13px;
+   letter-spacing: 1px;
+   color: #fffdee;
+   text-transform: uppercase;
+   transition: 1s cubic-bezier(.165, .84, .44, 1);
+}
+.form input[type=submit]:hover {
+   background: #C42061;
 }
 .error {
     border: 2px solid red;
@@ -44,7 +85,7 @@ if (!empty($messages)) {
    <div class="form">
     <h1>Форма контракта</h1>
 
-    <form action="index.php" method="POST">
+    <form class="form1" action="index.php" method="POST">
     
       <label>Имя:</label><br />
       <input type="text" name="field-name" placeholder="Name" <?php if ($errors['field-name']) {print 'class="error"';} ?>
