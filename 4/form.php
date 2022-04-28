@@ -33,8 +33,18 @@ form {
 
   background: #FFF url(background.jpg);
 }
-	label {
+label {
   font : .8em "typewriter", sans-serif;
+}
+input, textarea {
+  font    : .9em/1.5em "handwriting", sans-serif;
+
+  border  : none;
+  padding : 0 10px;
+  margin  : 0;
+  width   : 240px;
+
+  background: none;
 }
   .error {
     border: 2px solid red;
