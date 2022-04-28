@@ -49,6 +49,17 @@ input:focus, textarea:focus {
   border-radius: 5px;
   outline      : none;
 }
+textarea {
+  display : block;
+
+  padding : 10px;
+  margin  : 10px 0 0 -10px;
+  width   : 340px;
+  height  : 360px;
+
+  resize  : none;
+  overflow: auto;
+}
   .error {
     border: 2px solid red;
   }
