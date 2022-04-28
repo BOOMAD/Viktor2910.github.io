@@ -10,15 +10,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
 		// Если есть параметр save, то выводим сообщение пользователю.
 		$messages[] = 'Спасибо, результаты сохранены.';
 	  }
-	$error= array();
-	$error['field-name'] = !empty(&_COOKIE['field-name_error']);
-	$error['field-email'] = !empty(&_COOKIE['field-email_error']);
-	$error['year'] = !empty(&_COOKIE['year_error']);
-	$error['radio-group-1'] = !empty($_COOKIE['radio-group-1_error']);
-	$error['radio-group-2'] = !empty($_COOKIE['radio-group-2_error']);
-	$error['field-me'] = !empty(&_COOKIE['field-me_error']);
-	$error['field-listbox'] = !empty(&_COOKIE['field-listbox_error']);
-	$error['check-1'] = !empty($_COOKIE['check-1_error']);
+	$errors= array();
+	$errors['field-name'] = !empty(&_COOKIE['field-name_error']);
+	$errors['field-email'] = !empty(&_COOKIE['field-email_error']);
+	$errors['year'] = !empty(&_COOKIE['year_error']);
+	$errors['radio-group-1'] = !empty($_COOKIE['radio-group-1_error']);
+	$errors['radio-group-2'] = !empty($_COOKIE['radio-group-2_error']);
+	$errors['field-me'] = !empty(&_COOKIE['field-me_error']);
+	$errors['field-listbox'] = !empty(&_COOKIE['field-listbox_error']);
+	$errors['check-1'] = !empty($_COOKIE['check-1_error']);
 
   	// TODO: аналогично все поля.
 	  if ($errors['field-name']) {
