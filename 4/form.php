@@ -36,31 +36,7 @@ form {
 label {
   font : .8em "typewriter", sans-serif;
 }
-input, textarea {
-  font    : .9em/1.5em "handwriting", sans-serif;
-
-  border  : none;
-  
-
-  background: none;
-}
-input:focus, textarea:focus {
-  background   : rgba(0,0,0,.1);
-  border-radius: 5px;
-  outline      : none;
-}
-textarea {
-  display : block;
-
-  padding : 10px;
-  margin  : 10px 0 0 -10px;
-  width   : 340px;
-  height  : 360px;
-
-  resize  : none;
-  overflow: auto;
-}
-  .error {
+.error {
     border: 2px solid red;
   }
 </style>
