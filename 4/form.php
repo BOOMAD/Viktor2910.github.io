@@ -1,19 +1,37 @@
 <style>
-  * {
-  box-sizing:border-box;
+  @font-face {
+    font-family: 'handwriting';
+    src: url('fonts/journal-webfont.woff2') format('woff2'),
+         url('fonts/journal-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'typewriter';
+    src: url('fonts/veteran_typewriter-webfont.woff2') format('woff2'),
+         url('fonts/veteran_typewriter-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-  margin:20px;
-  background-color: #fafafa;
+  font  : 21px sans-serif;
+
+  padding : 2em;
+  margin  : 0;
+
+  background : #222;
 }
-textarea {
-  width:100%;
-  resize: vertical;
-  padding:15px;
-  border-radius:15px;
-  border:0;
-  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
-  height:150px;
+
+form {
+  position: relative;
+
+  width  : 740px;
+  height : 498px;
+  margin : 0 auto;
+
+  background: #FFF url(background.jpg);
 }
   .error {
     border: 2px solid red;
