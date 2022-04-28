@@ -121,10 +121,11 @@ if (!empty($messages)) {
 ?>
 
    <div class="form">
+	   
     <h1>Форма контракта</h1>
 
     <form class="form1" action="index.php" method="POST">
-    
+    <div class="stripes-block"></div>
       <label>Имя:</label><br />
       <input type="text" name="field-name" placeholder="Name" <?php if ($errors['field-name']) {print 'class="error"';} ?>
 	     value="<?php print $values['field-name']; ?>" />
