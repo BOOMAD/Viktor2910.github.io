@@ -76,8 +76,9 @@ if (!empty($messages)) {
   print('</div>');
 }
 ?>
-  <form class="form1" action="index.php" method="POST">
 	<div class="form">
+  <form class="form1" action="index.php" method="POST">
+	
     <label> ФИО </label> <br>
     <input name="field-name" <?php if ($errors_s['field-name']) {print 'class="error"';} ?> value="<?php print $values['field-name']; ?>" /> <br>
     <label> Почта </label> <br>
