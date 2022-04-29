@@ -199,7 +199,7 @@ else {
     $a=array(
       "teleport_value"=>0,
       "fly_value"=>0,
-      "superspeed_value"=>0
+      "superspeed_value"=>0,
       "time-line_value"=>0
     );
     foreach($field_listbox as $pwr){
