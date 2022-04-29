@@ -1,69 +1,15 @@
 <style>
-* {
-   box-sizing: border-box;
-}
-body {
-   background: #e6f4fd;
-   font-family: 'Roboto', sans-serif;
-}
-.form {
-   max-width: 350px;
-   padding: 80px 30px 30px;
-   margin: 50px auto 30px;
-   background: white;
-}
-.form h1 {
-   position: relative;
-   z-index: 5;
-   margin: 0 0 60px;
-   text-align: center;
-   color: #4a90e2;
-   font-size: 30px;
-   font-weight: normal;
-}
-.form h1:before {
-   content: "";
-   position: absolute;
-   z-index: -1;
-   left: 60px;
-   top: -30px;
-   width: 100px;
-   height: 100px;
-   border-radius: 50%;
-   background: #fee8e4;
-}
-.form h1:after {
-   content: "";
-   position: absolute;
-   z-index: -1;
-   right: 50px;
-   top: -40px;
-   width: 0;
-   height: 0;
-   border-left: 55px solid transparent;
-   border-right: 55px solid transparent;
-   border-bottom: 90px solid #ffe3b5;
-}
-
-.form1 input[type="submit"] {
-   width: 100%;
-   padding: 0;
-   line-height: 42px;
-   background: #4a90e2;
-   border-width: 0;
-   color: white;
-   font-size: 20px;
-}
-.form1 p {
-   margin: 0;
-   padding-top: 10px;
-}
-.error {
-  border: 2px solid red;
-}
-.hidden{
-  display: none;
-}
+  .form{
+    max-width: 960px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .error {
+    border: 2px solid red;
+  }
+  .hidden{
+    display: none;
+  }
 </style>
 <body>
 <?php
