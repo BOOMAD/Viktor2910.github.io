@@ -64,6 +64,7 @@ body {
 .hidden{
   display: none;
 }
+	</style>
 <body>
 <?php
 if (!empty($messages)) {
