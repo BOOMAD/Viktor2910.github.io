@@ -37,37 +37,37 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $errors_s['gr-2'] = !empty($_COOKIE['gr-2_error']);
   $errors_s['field-listbox'] = !empty($_COOKIE['field-listbox_error']);
   $errors_s['privacy'] = !empty($_COOKIE['privacy_error']);
-  if (!empty($errors_ar['field-name'])) {
+  if (!empty($errors_s['field-name'])) {
     setcookie('field-name_error', '', 100000);
     $messages[] = '<div class="error">Заполните имя.</div>';
     $error=TRUE;
   }
-  if ($errors_ar['email']) {
+  if ($errors_s['email']) {
     setcookie('email_error', '', 100000);
     $messages[] = '<div class="error">Заполните или исправьте почту.</div>';
     $error=TRUE;
   }
-  if ($errors_ar['year']) {
+  if ($errors_s['year']) {
     setcookie('year_error', '', 100000);
     $messages[] = '<div class="error">Выберите год рождения.</div>';
     $error=TRUE;
   }
-  if ($errors_ar['gr-1']) {
+  if ($errors_s['gr-1']) {
     setcookie('gr-1_error', '', 100000);
     $messages[] = '<div class="error">Выберите пол.</div>';
     $error=TRUE;
   }
-  if ($errors_ar['gr-2']) {
+  if ($errors_s['gr-2']) {
     setcookie('gr-2_error', '', 100000);
     $messages[] = '<div class="error">Выберите сколько у вас конечностей.</div>';
     $error=TRUE;
   }
-  if ($errors_ar['field-listbox']) {
+  if ($errors_s['field-listbox']) {
     setcookie('field-listbox_error', '', 100000);
     $messages[] = '<div class="error">Выберите хотя бы одну суперспособность.</div>';
     $error=TRUE;
   }
-  if ($errors_ar['privacy']) {
+  if ($errors_s['privacy']) {
     setcookie('privacy_error', '', 100000);
     $messages[] = '<div class="error">Необходимо согласиться с политикой конфиденциальности.</div>';
     $error=TRUE;
