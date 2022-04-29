@@ -124,7 +124,7 @@ if (!empty($messages)) {
     if($values['privacy'] or !empty($_SESSION['login'])){
       $ch='checked';
     }
-    if ($errors_ar['privacy']) {
+    if ($errors_s['privacy']) {
       $cl_e='class="error"';
     }
     if(empty($_SESSION['login'])){
