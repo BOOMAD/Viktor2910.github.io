@@ -91,12 +91,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
       $get->bindParam(1,$_SESSION['uid']);
       $get->execute();
       $inf=$get->fetchALL();
-      $values['field-name']=$inf[0]['field-name'];
+ 
+      $values['field-name']=$inf[0]['name'];
       $values['email']=$inf[0]['email'];
-      $values['year']=$inf[0]['year'];
-      $values['gr-1']=$inf[0]['gr-1'];
-      $values['gr-2']=$inf[0]['gr-2'];
-      $values['field-me']=$inf[0]['field-me'];
+      $values['year']=$inf[0]['date'];
+      $values['gr-1']=$inf[0]['sex'];
+      $values['gr-2']=$inf[0]['limb'];
+      $values['field-me']=$inf[0]['me'];
 
       $get2=$db->prepare("select field-listbox from field-listbox where id=?");
       $get2->bindParam(1,$_SESSION['uid']);
@@ -280,7 +281,7 @@ else {
       setcookie('pass_in', $pass_in);
 
       try {
-        $stmt = $db->prepare("INSERT INTO application SET field-name=:field-name,email=:email,year=:date,gr-1=:gr-1,gr-2=:gr-2,me=:field-me");
+        $stmt = $db->prepare("INSERT INTO date_base SET field-name=:field-name,email=:email,year=:date,gr-1=:gr-1,gr-2=:gr-2,me=:field-me");
         $stmt->bindParam(':field-name',$_POST['field-name']);
         $stmt->bindParam(':email',$_POST['email']);
         $stmt->bindParam(':date',$_POST['year']);
