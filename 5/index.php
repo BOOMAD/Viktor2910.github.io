@@ -249,7 +249,7 @@ else {
   require('connect.php');
   if (!empty($_COOKIE[session_name()]) && !empty($_SESSION['login']) and !$errors) {
     $id=$_SESSION['uid'];
-    $upd=$db->prepare("update date_base set name=:field-name,email=:email,year=:year,pol=:gr-1,limbs=:gr-2,bio=:field-me where contact_id=:id");
+    $upd=$db->prepare("update date_base set name=:name,email=:email,year=:year,pol=:pol,limbs=:limbs,bio=:bio where contact_id=:id");
     $cols=array(
       ':name'=>$field_name,
       ':email'=>$email,
