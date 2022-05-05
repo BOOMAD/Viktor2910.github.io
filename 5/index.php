@@ -263,9 +263,9 @@ else {
     }
     $upd->bindParam(':id',$id);
     $upd->execute();
-    $del=$db->prepare("delete from powers where id=?");
+    $del=$db->prepare("delete from powers where contact_id=?");
     $del->execute(array($id));
-    $upd1=$db->prepare("insert into field-listbox set superpowers=:power,id=:id");
+    $upd1=$db->prepare("insert into powers set superpowers=:power,id=:id");
     $upd1->bindParam(':id',$id);
     foreach($field_listbox as $pwr){
       $upd1->bindParam(':power',$pwr);
