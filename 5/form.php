@@ -135,6 +135,7 @@ if (!empty($messages)) {
     </div>');}
     ?>
     <input type="submit" value="Отправить"/>
+	  </form>
 	  <?php
   if(empty($_SESSION['login'])){
    echo'
@@ -148,6 +149,6 @@ if (!empty($messages)) {
       <a href="logout.php" name="logout">Выйти</a>
     </div>';
   } ?>
-  </form>
+  
   </div>
 </body>
