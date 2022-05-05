@@ -91,12 +91,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
       $get->bindParam(1,$_SESSION['uid']);
       $get->execute();
       $inf=$get->fetchALL();
-      $values['field-name']=$inf[0]['name'];
+      $values['field-name']=$inf[0]['field-name'];
       $values['email']=$inf[0]['email'];
-      $values['year']=$inf[0]['date'];
-      $values['gr-1']=$inf[0]['sex'];
-      $values['gr-2']=$inf[0]['limb'];
-      $values['field-me']=$inf[0]['me'];
+      $values['year']=$inf[0]['year'];
+      $values['gr-1']=$inf[0]['gr-1'];
+      $values['gr-2']=$inf[0]['gr-2'];
+      $values['field-me']=$inf[0]['field-me'];
 
       $get2=$db->prepare("select field-listbox from field-listbox where id=?");
       $get2->bindParam(1,$_SESSION['uid']);
