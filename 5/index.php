@@ -94,12 +94,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
  
       $values['field-name']=$inf[0]['name'];
       $values['email']=$inf[0]['email'];
-      $values['year']=$inf[0]['date'];
-      $values['gr-1']=$inf[0]['sex'];
-      $values['gr-2']=$inf[0]['limb'];
-      $values['field-me']=$inf[0]['me'];
+      $values['year']=$inf[0]['year'];
+      $values['gr-1']=$inf[0]['pol'];
+      $values['gr-2']=$inf[0]['limbs'];
+      $values['field-me']=$inf[0]['bio'];
 
-      $get2=$db->prepare("select field-listbox from field-listbox where id=?");
+      $get2=$db->prepare("select superpowers from powers where id=?");
       $get2->bindParam(1,$_SESSION['uid']);
       $get2->execute();
       $inf2=$get2->fetchALL();
@@ -249,23 +249,23 @@ else {
   require('connect.php');
   if (!empty($_COOKIE[session_name()]) && !empty($_SESSION['login']) and !$errors) {
     $id=$_SESSION['uid'];
-    $upd=$db->prepare("update date_base set field-name=:field-name,email=:email,year=:date,gr-1=:sex,gr-2=:limb,me=:field-me where id=:id");
+    $upd=$db->prepare("update date_base set name=:field-name,email=:email,year=:year,pol=:gr-1,limbs=:gr-2,bio=:field-me where id=:id");
     $cols=array(
-      ':field-name'=>$field_name,
+      ':name'=>$field_name,
       ':email'=>$email,
-      ':date'=>$year,
-      ':gr-1'=>$gr_1,
-      ':gr-2'=>$gr_2,
-      ':me'=>$field_me
+      ':year'=>$year,
+      ':pol'=>$gr_1,
+      ':limbs'=>$gr_2,
+      ':bio'=>$field_me
     );
     foreach($cols as $k=>&$v){
       $upd->bindParam($k,$v);
     }
     $upd->bindParam(':id',$id);
     $upd->execute();
-    $del=$db->prepare("delete from field-listbox where id=?");
+    $del=$db->prepare("delete from powers where id=?");
     $del->execute(array($id));
-    $upd1=$db->prepare("insert into field-listbox set field-listbox=:power,id=:id");
+    $upd1=$db->prepare("insert into field-listbox set superpowers=:power,id=:id");
     $upd1->bindParam(':id',$id);
     foreach($field_listbox as $pwr){
       $upd1->bindParam(':power',$pwr);
@@ -281,13 +281,13 @@ else {
       setcookie('pass_in', $pass_in);
 
       try {
-        $stmt = $db->prepare("INSERT INTO date_base SET field-name=:field-name,email=:email,year=:date,gr-1=:gr-1,gr-2=:gr-2,me=:field-me");
-        $stmt->bindParam(':field-name',$_POST['field-name']);
+        $stmt = $db->prepare("INSERT INTO date_base SET name=:field-name,email=:email,year=:year,pol=:gr-1,limbs=:gr-2,bio=:field-me");
+        $stmt->bindParam(':name',$_POST['field-name']);
         $stmt->bindParam(':email',$_POST['email']);
-        $stmt->bindParam(':date',$_POST['year']);
-        $stmt->bindParam(':gr-1',$_POST['gr-1']);
-        $stmt->bindParam(':gr-2',$_POST['gr-2']);
-        $stmt->bindParam(':me',$_POST['field-me']);
+        $stmt->bindParam(':year',$_POST['year']);
+        $stmt->bindParam(':pol',$_POST['gr-1']);
+        $stmt->bindParam(':limbs',$_POST['gr-2']);
+        $stmt->bindParam(':bio',$_POST['field-me']);
         $stmt -> execute();
 
         $id=$db->lastInsertId();
@@ -298,10 +298,10 @@ else {
         $usr->bindParam(3,$pass_hash);
         $usr->execute();
 
-        $pwr=$db->prepare("INSERT INTO field-listbox SET field-listbox=:power,id=:id");
+        $pwr=$db->prepare("INSERT INTO powers SET superpowers=:power,id=:id");
         $pwr->bindParam(':id',$id);
-        foreach($_POST['power'] as $field_listbox){
-          $pwr->bindParam(':power',$field_listbox); 
+        foreach($_POST['power'] as $power){
+          $pwr->bindParam(':power',$power); 
           $pwr->execute();  
         }
       }
