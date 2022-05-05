@@ -265,7 +265,7 @@ else {
     $upd->execute();
     $del=$db->prepare("delete from powers where contact_id=?");
     $del->execute(array($id));
-    $upd1=$db->prepare("insert into powers set superpowers=:power,id=:id");
+    $upd1=$db->prepare("insert into powers set superpowers=:power,contact_id=:id");
     $upd1->bindParam(':id',$id);
     foreach($field_listbox as $pwr){
       $upd1->bindParam(':power',$pwr);
@@ -300,7 +300,7 @@ else {
 
         $pwr=$db->prepare("INSERT INTO powers SET superpowers=:power,contact_id=:id");
         $pwr->bindParam(':contact_id',$id);
-        foreach($_POST['powers'] as $power){
+        foreach($field-listbox as $power){
           $pwr->bindParam(':power',$power); 
           $pwr->execute();  
         }
