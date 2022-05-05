@@ -281,7 +281,7 @@ else {
       setcookie('pass_in', $pass_in);
 
       try {
-        $stmt = $db->prepare("INSERT INTO date_base SET name=:field-name,email=:email,year=:year,pol=:gr-1,limbs=:gr-2,bio=:field-me");
+        $stmt = $db->prepare("INSERT INTO date_base SET name=:name,email=:email,year=:year,pol=:pol,limbs=:limbs,bio=:bio");
         $stmt->bindParam(':name',$_POST['field-name']);
         $stmt->bindParam(':email',$_POST['email']);
         $stmt->bindParam(':year',$_POST['year']);
