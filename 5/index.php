@@ -299,7 +299,7 @@ else {
         $usr->execute();
 
         $pwr=$db->prepare("INSERT INTO powers SET superpowers=:power,contact_id=:id");
-        $pwr->bindParam(':contact_id',$id);
+        $pwr->bindParam(':id',$id);
         foreach($field-listbox as $power){
           $pwr->bindParam(':power',$power); 
           $pwr->execute();  
