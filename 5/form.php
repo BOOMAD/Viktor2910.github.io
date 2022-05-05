@@ -111,7 +111,7 @@ if (!empty($messages)) {
       <input name="gr-2" type="radio" value="4" <?php if($values['gr-2']=="4") {print 'checked';} ?>/> 4 
     </div>
     <label> Выберите суперспособности </label> <br>
-    <select name="field-lisbox[]" size="4" multiple <?php if ($errors_s['field-listbox']) {print 'class="error"';} ?>>
+    <select name="field-listbox[]" size="4" multiple <?php if ($errors_s['field-listbox']) {print 'class="error"';} ?>>
       <option value="телепорт" <?php if($values['teleport']==1){print 'selected';} ?>>Телепорт</option>
       <option value="полёт" <?php if($values['fly']==1){print 'selected';} ?>>Полёт</option>
       <option value="суперскорость" <?php if($values['superspeed']==1){print 'selected';} ?>>Суперскорость</option>
@@ -135,8 +135,7 @@ if (!empty($messages)) {
     </div>');}
     ?>
     <input type="submit" value="Отправить"/>
-  </form>
-  <?php
+	  <?php
   if(empty($_SESSION['login'])){
    echo'
    <div class="login">
@@ -149,5 +148,6 @@ if (!empty($messages)) {
       <a href="logout.php" name="logout">Выйти</a>
     </div>';
   } ?>
+  </form>
   </div>
 </body>
