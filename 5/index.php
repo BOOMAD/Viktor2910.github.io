@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $values['year'] = empty($_COOKIE['year_value']) ? 0 : $_COOKIE['year_value'];
   $values['gr-1'] = empty($_COOKIE['gr-1_value']) ? '' : $_COOKIE['gr-1_value'];
   $values['gr-2'] = empty($_COOKIE['gr-2_value']) ? '' : $_COOKIE['gr-2_value'];
-  $values['teleport'] = empty($_COOKIE['teleport_value']) ? 0 : $_COOKIE['teleportl_value'];
+  $values['teleport'] = empty($_COOKIE['teleport_value']) ? 0 : $_COOKIE['teleport_value'];
   $values['fly'] = empty($_COOKIE['fly_value']) ? 0 : $_COOKIE['fly_value'];
   $values['superspeed'] = empty($_COOKIE['superspeed_value']) ? 0 : $_COOKIE['superspeed_value'];
   $values['time-line'] = empty($_COOKIE['time-line_value']) ? 0 : $_COOKIE['time-line_value'];
