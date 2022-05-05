@@ -249,7 +249,7 @@ else {
   require('connect.php');
   if (!empty($_COOKIE[session_name()]) && !empty($_SESSION['login']) and !$errors) {
     $id=$_SESSION['uid'];
-    $upd=$db->prepare("update date_base set name=:field-name,email=:email,year=:year,pol=:gr-1,limbs=:gr-2,bio=:field-me where id=:id");
+    $upd=$db->prepare("update date_base set name=:field-name,email=:email,year=:year,pol=:gr-1,limbs=:gr-2,bio=:field-me where contact_id=:id");
     $cols=array(
       ':name'=>$field_name,
       ':email'=>$email,
@@ -298,10 +298,10 @@ else {
         $usr->bindParam(3,$pass_hash);
         $usr->execute();
 
-        $pwr=$db->prepare("INSERT INTO powers SET superpowers=:power,id=:id");
+        $pwr=$db->prepare("INSERT INTO powers SET superpowers=:power,contact_id=:id");
         $pwr->bindParam(':id',$id);
-        foreach($_POST['power'] as $power){
-          $pwr->bindParam(':power',$power); 
+        foreach($_POST['power'] as $powers){
+          $pwr->bindParam(':power',$powers); 
           $pwr->execute();  
         }
       }
