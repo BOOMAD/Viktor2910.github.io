@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
       $values['gr-2']=$inf[0]['limbs'];
       $values['field-me']=$inf[0]['bio'];
 
-      $get2=$db->prepare("select superpowers from powers where contact_id=?");
+      $get2=$db->prepare("select superpowers from powers where id=?");
       $get2->bindParam(1,$_SESSION['uid']);
       $get2->execute();
       $inf2=$get2->fetchALL();
