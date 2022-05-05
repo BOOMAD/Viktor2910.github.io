@@ -299,9 +299,9 @@ else {
         $usr->execute();
 
         $pwr=$db->prepare("INSERT INTO powers SET superpowers=:power,contact_id=:id");
-        $pwr->bindParam(':id',$id);
-        foreach($_POST['power'] as $powers){
-          $pwr->bindParam(':power',$powers); 
+        $pwr->bindParam(':contact_id',$id);
+        foreach($_POST['powers'] as $power){
+          $pwr->bindParam(':superpowers',$power); 
           $pwr->execute();  
         }
       }
