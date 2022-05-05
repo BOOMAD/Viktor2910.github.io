@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   if (!$error and !empty($_COOKIE[session_name()]) and !empty($_SESSION['login'])) {
     require('connect.php');
     try{
-      $get=$db->prepare("select * from application where id=?");
+      $get=$db->prepare("select * from date_base where id=?");
       $get->bindParam(1,$_SESSION['uid']);
       $get->execute();
       $inf=$get->fetchALL();
@@ -248,7 +248,7 @@ else {
   require('connect.php');
   if (!empty($_COOKIE[session_name()]) && !empty($_SESSION['login']) and !$errors) {
     $id=$_SESSION['uid'];
-    $upd=$db->prepare("update application set field-name=:field-name,email=:email,year=:date,gr-1=:sex,gr-2=:limb,me=:field-me where id=:id");
+    $upd=$db->prepare("update date_base set field-name=:field-name,email=:email,year=:date,gr-1=:sex,gr-2=:limb,me=:field-me where id=:id");
     $cols=array(
       ':field-name'=>$field_name,
       ':email'=>$email,
