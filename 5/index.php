@@ -104,16 +104,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
       $get2->execute();
       $inf2=$get2->fetchALL();
       for($i=0;$i<count($inf2);$i++){
-        if($inf2[$i]['field-listbox']=='телепорт'){
+        if($inf2[$i]['superpowers']=='телепорт'){
           $values['teleport']=1;
         }
-        if($inf2[$i]['field-listbox']=='полёт'){
+        if($inf2[$i]['superpowers']=='полёт'){
           $values['fly']=1;
         }
-        if($inf2[$i]['field-listbox']=='суперскорость'){
+        if($inf2[$i]['superpowers']=='суперскорость'){
           $values['superspeed']=1;
         }
-        if($inf2[$i]['field-listbox']=='тайм-лайн'){
+        if($inf2[$i]['superpowers']=='тайм-лайн'){
           $values['time-line']=1;
         }
       }
