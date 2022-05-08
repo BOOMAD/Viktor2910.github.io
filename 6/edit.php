@@ -137,8 +137,8 @@ else {
     $field_name=$_POST['field-name'];
     $email=$_POST['email'];
     $year=$_POST['year'];
-    $gr-1=$_POST['gr-1'];
-    $gr-2=$_POST['gr-2'];
+    $gr_1=$_POST['gr-1'];
+    $gr_2=$_POST['gr-2'];
     $pwrs=$_POST['power'];
     $field_me=$_POST['field-me'];
     $errors = FALSE;
@@ -160,13 +160,13 @@ else {
         $errors = TRUE;
     }
     //проверка пола
-    if (!isset($gr-1)) {
+    if (!isset($gr_1)) {
         setcookie('gr-1_error', '1', time() + 24 * 60 * 60);
         setcookie('gr-2_value', '', 100000);
         $errors = TRUE;
     }
     //проверка конечностей
-    if (!isset($gr-2)) {
+    if (!isset($gr_2)) {
         setcookie('gr-2_error', '1', time() + 24 * 60 * 60);
         setcookie('gr-2_value', '', 100000);
         $errors = TRUE;
