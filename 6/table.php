@@ -40,7 +40,7 @@
                     "time-line"=>FALSE
                 );
                 foreach($pwrs as $pwr){
-                    if($pwr['contact_id']==$user['contact_id']){
+                    if($pwr['contact_id']==$user['id']){
                         if($pwr['power']=='телепорт'){
                             $user_pwrs['teleport']=TRUE;
                         }
