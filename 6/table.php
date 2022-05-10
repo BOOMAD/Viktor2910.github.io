@@ -41,16 +41,16 @@
                 );
                 foreach($pwrs as $pwr){
                     if($pwr['contact_id']==$user['contact_id']){
-                        if($pwr['power']=='телепорт'){
+                        if($pwr['superpowers']=='телепорт'){
                             $user_pwrs['teleport']=TRUE;
                         }
-                        if($pwr['power']=='полёт'){
+                        if($pwr['superpowers']=='полёт'){
                             $user_pwrs['fly']=TRUE;
                         }
-                        if($pwr['power']=='суперскорость'){
+                        if($pwr['superpowers']=='суперскорость'){
                             $user_pwrs['superspeed']=TRUE;
                         }
-                        if($pwr['power']=='тайм-лайн'){
+                        if($pwr['superpowers']=='тайм-лайн'){
                             $user_pwrs['time-line']=TRUE;
                         }
                     }
