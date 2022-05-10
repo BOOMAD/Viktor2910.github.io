@@ -37,7 +37,7 @@ if($_SERVER['REQUEST_METHOD']=='GET'){
     $get=$db->prepare("select * from date_base");
     $get->execute();
     $inf=$get->fetchALL();
-    $get2=$db->prepare("select id,superpowers from powers");
+    $get2=$db->prepare("select contact_id,superpowers from powers");
     $get2->execute();
     $inf2=$get2->fetchALL();
     $count=$db->prepare("select count(*) from powers where superpowers=?");
