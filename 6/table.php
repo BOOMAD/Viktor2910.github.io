@@ -40,7 +40,7 @@
                     "time-line"=>FALSE
                 );
                 foreach($pwrs as $pwr){
-                    if($pwr['id']==$user['id']){
+                    if($pwr['contact_id']==$user['contact_id']){
                         if($pwr['power']=='телепорт'){
                             $user_pwrs['teleport']=TRUE;
                         }
@@ -63,7 +63,7 @@
               <td>'.$user['bio'].'</td>
               <td>
                 <form method="get" action="edit.php">
-                  <input name=edit_id value='.$user['id'].' hidden>
+                  <input name=edit_id value='.$user['contact_id'].' hidden>
                   <input type="submit" value=Edit>
                 </form>
               </td>
