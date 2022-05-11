@@ -114,8 +114,8 @@ if (!empty($messages)) {
     <select name="power[]" size="4" multiple <?php  ?>>
       <option value="телепорт" <?php if($values['teleport']==1){print 'selected';} ?>>Телепорт</option>
       <option value="полёт" <?php if($values['fly']==1){print 'selected';} ?>>Полёт</option>
-      <option value="суперскорость" <?php if($values['Superspeed']==1){print 'selected';} ?>>Суперскорость</option>
-      <option value="тайм-лайн" <?php if($values['Time-line']==1){print 'selected';} ?>>Тайм-лайня</option>
+      <option value="суперскорость" <?php if($values['superspeed']==1){print 'selected';} ?>>Суперскорость</option>
+      <option value="тайм-лайн" <?php if($values['time-line']==1){print 'selected';} ?>>Тайм-лайня</option>
     </select> <br>
     <label> Биография </label> <br>
     <textarea name="field-me" rows="10" cols="15"><?php print $values['field-me']; ?></textarea> <br>
