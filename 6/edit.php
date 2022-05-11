@@ -111,16 +111,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
       $get2->execute();
       $inf2=$get2->fetchALL();
       for($i=0;$i<count($inf2);$i++){
-        if(($inf2[$i]['superpowers']=='телепорт')||($inf2[$i]['superpowers']=='teleport')){
+        if(($inf2[$i]['superpowers']=='телепорт')||($inf2[$i]['superpowers']=='teleport')($inf2[$i]['superpowers']=='Телепорт')||($inf2[$i]['superpowers']=='Teleport')){
           $values['teleport']=1;
         }
-        if(($inf2[$i]['superpowers']=='полёт')||($inf2[$i]['superpowers']=='fly')){
+        if(($inf2[$i]['superpowers']=='полёт')||($inf2[$i]['superpowers']=='fly')($inf2[$i]['superpowers']=='Полёт')||($inf2[$i]['superpowers']=='Fly')){
           $values['fly']=1;
         }
-        if(($inf2[$i]['superpowers']=='суперскорость')||($inf2[$i]['superpowers']=='superspeed')){
+        if(($inf2[$i]['superpowers']=='суперскорость')||($inf2[$i]['superpowers']=='superspeed')($inf2[$i]['superpowers']=='Суперскорость')||($inf2[$i]['superpowers']=='Superspeed')){
           $values['superspeed']=1;
         }
-        if(($inf2[$i]['superpowers']=='тайм-лайн')||($inf2[$i]['superpowers']=='time-line')){
+        if(($inf2[$i]['superpowers']=='тайм-лайн')||($inf2[$i]['superpowers']=='time-line')($inf2[$i]['superpowers']=='Тайм-лайн')||($inf2[$i]['superpowers']=='Time-line')){
             $values['time-line']=1;
           }
       }
