@@ -41,16 +41,16 @@
                 );
                 foreach($pwrs as $pwr){
                     if($pwr['contact_id']==$user['contact_id']){
-                        if(($pwr['superpowers']=='телепорт')||($pwr['superpowers']=='teleport')){
+                        if(($pwr['superpowers']=='телепорт')||($pwr['superpowers']=='Телепорт')||($pwr['superpowers']=='teleport')||($pwr['superpowers']=='Teleport')){
                             $user_pwrs['teleport']=TRUE;
                         }
-                        if(($pwr['superpowers']=='полёт')||($pwr['superpowers']=='fly')){
+                        if(($pwr['superpowers']=='полёт')||($pwr['superpowers']=='Полёт')||($pwr['superpowers']=='fly')||($pwr['superpowers']=='Fly')){
                             $user_pwrs['fly']=TRUE;
                         }
-                        if(($pwr['superpowers']=='суперскорость')||($pwr['superpowers']=='superspeed')){
+                        if(($pwr['superpowers']=='суперскорость')||($pwr['superpowers']=='Суперскорость')||($pwr['superpowers']=='superspeed')||($pwr['superpowers']=='Superspeed')){
                             $user_pwrs['superspeed']=TRUE;
                         }
-                        if(($pwr['superpowers']=='тайм-лайн')||($pwr['superpowers']=='time-line')){
+                        if(($pwr['superpowers']=='тайм-лайн')||($pwr['superpowers']=='Тайм-лайн')||($pwr['superpowers']=='time-line')||($pwr['superpowers']=='Time-line')){
                             $user_pwrs['time-line']=TRUE;
                         }
                     }
