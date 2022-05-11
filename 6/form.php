@@ -99,12 +99,12 @@ if (!empty($messages)) {
     </select> <br>
     <!--<input name="year" type="date" /> <br>-->
     <label> Ваш пол </label> <br>
-    <div <?php if ($errors_s['gr-1']) {print 'class="error"';} ?>>
+    <div <?php  ?>>
       <input name="gr-1" type="radio" value="M" <?php if($values['gr-1']=="M") {print 'checked';} ?>/> Мужчина
       <input name="gr-1" type="radio" value="W" <?php if($values['gr-1']=="W") {print 'checked';} ?>/> Женщина
     </div>
     <label> Сколько у вас конечностей </label> <br>
-    <div <?php if ($errors_s['gr-2']) {print 'class="error"';} ?>>
+    <div <?php  ?>>
       <input name="gr-2" type="radio" value="1" <?php if($values['gr-2']=="1") {print 'checked';} ?>/> 1 
       <input name="gr-2" type="radio" value="2" <?php if($values['gr-2']=="2") {print 'checked';} ?>/> 2 
       <input name="gr-2" type="radio" value="3" <?php if($values['gr-2']=="3") {print 'checked';} ?>/> 3 
