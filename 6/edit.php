@@ -111,16 +111,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
       $get2->execute();
       $inf2=$get2->fetchALL();
       for($i=0;$i<count($inf2);$i++){
-        if($inf2[$i]['superpowers']=='телепорт'){
+        if(($inf2[$i]['superpowers']=='телепорт')||($inf2[$i]['superpowers']=='teleport')){
           $values['teleport']=1;
         }
-        if($inf2[$i]['superpowers']=='полёт'){
+        if(($inf2[$i]['superpowers']=='полёт')||($inf2[$i]['superpowers']=='fly')){
           $values['fly']=1;
         }
-        if($inf2[$i]['superpowers']=='суперскорость'){
+        if(($inf2[$i]['superpowers']=='суперскорость')||($inf2[$i]['superpowers']=='superspeed')){
           $values['superspeed']=1;
         }
-        if($inf2[$i]['superpowers']=='тайм-лайн'){
+        if(($inf2[$i]['superpowers']=='тайм-лайн')||($inf2[$i]['superpowers']=='time-line')){
             $values['time-line']=1;
           }
       }
