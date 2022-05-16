@@ -27,7 +27,6 @@ if($_SERVER['REQUEST_METHOD']=='GET'){
     setcookie('del','');
     setcookie('del_user','');
   }
-  <h1 class="animation">Вы успешно авторизовались и видите защищенные паролем данные</h1>
   /*print('Вы успешно авторизовались и видите защищенные паролем данные.');*/
   $users=array();
   $pwrs=array();
