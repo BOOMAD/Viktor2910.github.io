@@ -22,8 +22,7 @@ th:first-child, td:first-child {
 text-align: left;
 }
   .messega{
-    background: #D8E6F3;
-    color: #111; font-family: ‘Helvetica Neue’, sans-serif; font-size: 30px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center;
+    color: #f8f8f8; font-family: ‘Raleway’,sans-serif; font-size: 18px; font-weight: 500; line-height: 32px; margin: 0 0 24px;
   }
   .error {
     border: 2px solid red;
