@@ -29,7 +29,7 @@ font-family: Arial;
 font-size:80px;
 text-transform: uppercase;
 color: rgba(255,255,255,0.2);
-background: url(https://yandex.ru/images/search?pos=1&img_url=https%3A%2F%2Fget.pxhere.com%2Fphoto%2Fwarm-orange-red-flame-fire-romantic-cozy-fireplace-glow-darkness-campfire-heat-energy-burn-performance-art-blaze-firelight-fiery-embers-wood-fire-flame-log-fire-heiss-wood-for-the-fireplace-open-fire-computer-wallpaper-1376000.jpg&text=пламя&lr=35&rpt=simage&source=serp);
+background: url(https://cdn.pixabay.com/photo/2017/01/09/16/49/flame-1966995_1280.jpg);
 repeat-x;
 -webkit-background-clip: text;
 background-size: contain;
