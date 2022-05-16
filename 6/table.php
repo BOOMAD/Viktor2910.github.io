@@ -22,7 +22,7 @@ th:first-child, td:first-child {
 text-align: left;
 }
   .messega{
-    color: #111; font-family: ‘Helvetica Neue’, sans-serif; font-size: 275px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center;
+    color: #111; font-family: ‘Helvetica Neue’, sans-serif; font-size: 30px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center;
   }
   .error {
     border: 2px solid red;
