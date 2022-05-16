@@ -23,7 +23,7 @@ th:first-child, td:first-child {
 text-align: left;
 }
   .messega{
-    color: #adb7bd; font-family: ‘Lucida Sans’, Arial, sans-serif; font-size: 16px; line-height: 26px; text-indent: 30px; margin: 0;
+    color: #ff4411; font-family: ‘Lucida Sans’, Arial, sans-serif; font-size: 16px; line-height: 26px; text-indent: 30px; margin: 0;
   }
   .error {
     border: 2px solid red;
