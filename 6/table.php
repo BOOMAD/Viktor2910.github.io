@@ -21,6 +21,9 @@ background: #D8E6F3;
 th:first-child, td:first-child {
 text-align: left;
 }
+  .messega{
+    color: #111; font-family: ‘Helvetica Neue’, sans-serif; font-size: 275px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center;
+  }
   .error {
     border: 2px solid red;
   }
@@ -88,11 +91,13 @@ text-align: left;
        }
       ?>
     </table>
+    <div class="messega">
     <?php
     printf('Кол-во пользователей с сверхспособностью "телепорт": %d <br>',$pwrs_count[0]);
     printf('Кол-во пользователей с сверхспособностью "полёт": %d <br>',$pwrs_count[1]);
     printf('Кол-во пользователей с сверхспособностью "суперскорость": %d <br>',$pwrs_count[2]);
     printf('Кол-во пользователей с сверхспособностью "тайм-лайн": %d <br>',$pwrs_count[3]);
     ?>
+    </div>
   </div>
 </body>
