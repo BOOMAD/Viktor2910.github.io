@@ -6,7 +6,8 @@ border-collapse: collapse;
 text-align: center;
 }
 th, td:first-child {
-background: #AFCDE7;
+  background-color: #93291b; border: 1px solid #333333; border-radius: 3px 3px 3px 3px; box-shadow: 0 0 1px #93291b inset; color: #f5f5f5; padding: 5px;
+//background: #AFCDE7;
 color: white;
 padding: 10px 20px;
 }
