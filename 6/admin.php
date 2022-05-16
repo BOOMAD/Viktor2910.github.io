@@ -27,7 +27,36 @@ if($_SERVER['REQUEST_METHOD']=='GET'){
     setcookie('del','');
     setcookie('del_user','');
   }
+  <style>
+  .animation{
+    text-aligh: centre;
+margin-top 15px;
+font-family: Arial;
+font-size:80px;
+text-transform: uppercase;
+color: rgba(255,255,255,0.2);
+background: url(https://yandex.ru/images/search?pos=1&img_url=https%3A%2F%2Fget.pxhere.com%2Fphoto%2Fwarm-orange-red-flame-fire-romantic-cozy-fireplace-glow-darkness-campfire-heat-energy-burn-performance-art-blaze-firelight-fiery-embers-wood-fire-flame-log-fire-heiss-wood-for-the-fireplace-open-fire-computer-wallpaper-1376000.jpg&text=пламя&lr=35&rpt=simage&source=serp);
+repeat-x;
+-webkit-background-clip: text;
+background-size: contain;
+animation: fire 13s linear infinite;
+  }
+                @keyframes fire{
+0%{
+background-position: left 0 top 0;
+}
+50%{
+background-position: left 150px top -25px;
+}
+100%{
+background-position: left 300px top 0;
+}
+}
+  </style>
+  
+  <div class ="animation">
   print('Вы успешно авторизовались и видите защищенные паролем данные.');
+  </div>
   $users=array();
   $pwrs=array();
   $pwr_def=array('телепорт','полёт','суперскорость','тайм-лайн');
