@@ -26,7 +26,7 @@ text-align: left;
 text-aligh: centre;
 margin-top 15px;
 font-family: Arial;
-font-size:80px;
+font-size:50px;
 text-transform: uppercase;
 color: rgba(255,255,255,0.2);
 background: url(https://cdn.pixabay.com/photo/2017/01/09/16/49/flame-1966995_1280.jpg);
