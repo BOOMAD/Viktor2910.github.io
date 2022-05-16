@@ -17,7 +17,7 @@ border-width: 0 1px 1px 0;
 border-color: white;
 }
 td {
-background: #D8E6F3;
+background: #93291b;
 }
 th:first-child, td:first-child {
 text-align: left;
