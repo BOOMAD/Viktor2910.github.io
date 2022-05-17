@@ -208,7 +208,7 @@ else {
         $upd->execute();
         $del=$db->prepare("delete from powers where contact_id=?");
         $del->execute(array($id));
-        $upd1=$db->prepare("insert into powers set superpowers=:power,contect_id=:id");
+        $upd1=$db->prepare("insert into powers set superpowers=:power,contact_id=:id");
         $upd1->bindParam(':id',$id);
         foreach($pwrs as $pwr){
         $upd1->bindParam(':power',$pwr);
